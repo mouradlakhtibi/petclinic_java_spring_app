@@ -2,6 +2,7 @@ pipeline {
     agent any
      environment {
         token = credentials('petclinic-token')
+       }
 
     stages {
         stage('Build') {
@@ -12,7 +13,7 @@ pipeline {
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
-		}
+		
            }
         }
     }
